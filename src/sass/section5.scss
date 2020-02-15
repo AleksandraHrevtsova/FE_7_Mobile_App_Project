@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
   .slider {
     // position: relative;
@@ -89,3 +90,36 @@
   .p {
       color: red;
   }
+=======
+.container {
+  width: 292px;
+  margin: 0 auto;
+}
+
+p {
+  color: black          
+}
+
+h2 {
+  color: black
+}
+  
+.text {
+  text-align:  center;
+}
+
+.round {
+  border: 3px solid gray; /* Параметры рамки */
+  box-shadow: 0 0 7px #666; /* Параметры тени */
+}
+
+img {
+  border-radius: 100%; /* Радиус скругления */
+  object-fit: cover;
+}
+
+.section5_ul {
+  list-style: none;
+  text-decoration: none;
+}
+>>>>>>> 94586ac8be2787aea748c74f3bb7d864856e35a6
