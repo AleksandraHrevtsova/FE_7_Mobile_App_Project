@@ -1,8 +1,6 @@
 .section1_wrapper {
   background: rgb(216, 124, 124);
   background-image: url('../images/earth1.jpg');
-  opacity: 0.9;
-  // z-index: -10;
   background-position: right;
   background-size: cover;
   color: rgb(245, 249, 252);
@@ -20,7 +18,7 @@
   font-family: 'OdibeeSans-Regular';
   font-weight: bold;
   text-transform: uppercase;
-  position: relative;
+  // position: relative;
 }
 
 .section1_title {
@@ -33,16 +31,16 @@
   border-image: linear-gradient(135deg, #12bcb0 20%, #fabe0e 70%);
   border-image-slice: 3;
   text-align: center;
-  margin-bottom: 170px;
+  margin-bottom: 26px;
 }
 
 .section1_description_1 {
   color: rgb(154, 215, 243);
   text-align: center;
-  width: 158px;
-  position: absolute;
-  top: 28%;
-  right: 2%;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  
 }
 
 .section1_description_2 {
@@ -91,7 +89,7 @@
 }
 
 .pictures {
-  position: relative;
+  // position: relative;
 }
 
 .picture_1 {
@@ -100,7 +98,7 @@
   position: absolute;
 }
 
-@media (min-width: 768px) {
+@media (width: 768px) {
   .container {
     min-width: 708px;
     margin: 0 auto;
@@ -125,7 +123,7 @@
 
   .arrows {
     width: 300px;
-    position: relative;
+    // position: relative;
   }
 
   li:last-child {
@@ -141,7 +139,7 @@
   }
 }
 
-@media (min-width: 1200px) {
+@media (width: 1200px) {
   .container {
     min-width: 1145px;
     margin: 0 auto;
