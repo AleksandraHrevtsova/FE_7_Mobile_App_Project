@@ -1,115 +1,298 @@
-.container {
-  width: 292px;
+#slider { /*положение слайдера*/
+  position: relative;
+  text-align: center;
+  top: 10px;
+
+}
+
+#slider { /*центровка слайдера*/
   margin: 0 auto;
+
 }
 
-.slider {
-  // position: relative;
-  // overflow: hidden;
+#slides article { /*все изображения справа друг от доруга*/
+ width: 20%;
+ float: left;
+
 }
 
-.slider__wrapper {
-  display: flex;
-  transition: transform 0.6s ease;
-  list-style: none;
+#slides .image { /*устанавливает общий размер блока с изображениями*/
+  width: 50%;
+  line-height: 0;
 }
 
-.slider__item {
-  flex: 0 0 100%;
-  max-width: 100%;
-  display: flex;
-  flex-flow: column;
+#overflow {
+  width: 100% ;
+  overflow: hidden;
 }
 
-.custom_name,
-.custom_text {
-  display: flex;
+article img {
+  width: 100%;
 }
 
-.custom_name {
-  font-size: 16px;
+#desktop:checked ~ #slider {
+  max-width: 960px;
 }
 
-.custom_text {
-  font-size: 14px;
+#switch1:checked ~ #controls label:nth-child (5),
+#switch1:checked ~ #controls label:nth-child (1),
+#switch1:checked ~ #controls label:nth-child (2),
+#switch1:checked ~ #controls label:nth-child (3),
+#switch1:checked ~ #controls label:nth-child (4), {
+  background: url ('prev.png') no repeat;
+  float: left;
+  margin: 0 0 0 -84px;
+  display: block;
+  height: 68px;
+  width: 68px;
 }
 
-.slider__control {
-  position: absolute;
-  top: 50%;
+#switch1:checked ~ #controls label:nth-child (2),
+#switch1:checked ~ #controls label:nth-child (3),
+#switch1:checked ~ #controls label:nth-child (4),
+#switch1:checked ~ #controls label:nth-child (5),
+#switch1:checked ~ #controls label:nth-child (1), {
+  background: url ('next.png') no repeat;
+  float: right;
+  margin: 0 -84px 0 0;
+  display: block;
+  height: 68px;
+  width: 68px;
+}
+
+label, a {
+  cursor: pointer;
+}
+
+.all input {
   display: none;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  color: #fff;
-  text-align: center;
-  opacity: 0.5;
+}
+
+#switch1:checked ~ #slides .image {
+  margin-left: 0;
+}
+
+#switch2:checked ~ #slides .image {
+  margin-left: -100%;
+}
+
+#switch3:checked ~ #slides .image {
+  margin-left: -200%;
+}
+
+#switch4:checked ~ #slides .image {
+  margin-left: -300%;
+}
+
+#switch5:checked ~ #slides .image{
+  margin-left: -400%;
+}
+
+#controls {
+  margin: -25% 0 0 0;
+  width: 100%;
   height: 50px;
-  transform: translateY(-50%);
-  background: rgba(0, 0, 0, .5);
 }
 
-.slider__control_show {
-  display: flex;
-}
-
-.slider__control:hover,
-.slider__control:focus {
-  color: #fff;
-  text-decoration: none;
-  outline: 0;
-  opacity: .9;
-}
-
-.slider__control_left {
-  left: 0;
-}
-
-.slider__control_right {
-  right: 0;
-}
-
-.slider__control::before {
-  content: '';
+#active label {
+  border-radius: 10px;
   display: inline-block;
-  width: 20px;
-  height: 20px;
-  background: transparent no-repeat center center;
-  background-size: 100% 100%;
+  width: 15px;
+  height: 15px;
+  background: #bbb;
 }
 
-.slider__control_left::before {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+#active label;:hover {
+  background: #76c8ff;
+  border-color: #777 !important;
 }
 
-.slider__control_right::before {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+#switch1:checked ~ #active label:nth-child (1), 
+#switch2:checked ~ #active label:nth-child (2),
+#switch3:checked ~ #active label:nth-child (3),
+#switch4:checked ~ #active label:nth-child (4),
+#switch5:checked ~ #active label:nth-child (5), {
+  background: #18a3dd
+  border-color #18a3dd !important
 }
 
-.slider__item>div {
-  line-height: 250px;
-  font-size: 100px;
-  text-align: center;
+#slides .image {
+  transition: all; 800ms cubic-bezier (0.770, 0.000. 0.175, 1.000);
 }
 
-.p {
-  color: red;
+#controls label:hover {
+  opacity: 0.6;
 }
 
-// ЗДЕСЬ МЫ ПИШЕМ СТИЛИ ДЛЯ MOBILE
-
-@media (width: 768px) {
-  .container {
-    width: 708px;
-  }
-
-  // ЗДЕСЬ МЫ ПИШЕМ СТИЛИ ДЛЯ TABLET
+#controls label {
+  transition: opacity 0.2s ease-out;
 }
+// .container {
+//   width: 292px;
+//   margin: 0 auto;
+// }
 
-@media (width: 1200px) {
-  .container {
-    width: 1145px;
-  }
+// .slider {
+//   // position: relative;
+//   // overflow: hidden;
+// }
 
-  // ЗДЕСЬ МЫ ПИШЕМ СТИЛИ ДЛЯ DESKTOP
-}
+// .slider__wrapper {
+//   display: flex;
+//   transition: transform 0.6s ease;
+//   list-style: none;
+// }
+
+// .slider__item {
+//   flex: 0 0 100%;
+//   max-width: 100%;
+//   display: flex;
+//   flex-flow: column;
+// }
+
+// .custom_name,
+// .custom_text {
+//   display: flex;
+// }
+
+// .custom_name {
+//   font-size: 16px;
+// }
+
+// .custom_text {
+//   font-size: 14px;
+// }
+
+// .slider__control {
+//   position: absolute;
+//   top: 50%;
+//   display: none;
+//   align-items: center;
+//   justify-content: center;
+//   width: 40px;
+//   color: #fff;
+//   text-align: center;
+//   opacity: 0.5;
+//   height: 50px;
+//   transform: translateY(-50%);
+//   background: rgba(0, 0, 0, .5);
+// }
+
+// .slider__control_show {
+//   display: flex;
+// }
+
+// .slider__control:hover,
+// .slider__control:focus {
+//   color: #fff;
+//   text-decoration: none;
+//   outline: 0;
+//   opacity: .9;
+// }
+
+// .slider__control_left {
+//   left: 0;
+// }
+
+// .slider__control_right {
+//   right: 0;
+// }
+
+// .slider__control::before {
+//   content: '';
+//   display: inline-block;
+//   width: 20px;
+//   height: 20px;
+//   background: transparent no-repeat center center;
+//   background-size: 100% 100%;
+// }
+
+// .slider__control_left::before {
+//   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+// }
+
+// .slider__control_right::before {
+//   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+// }
+
+// .slider__item>div {
+//   line-height: 250px;
+//   font-size: 100px;
+//   text-align: center;
+// }
+
+// .p {
+//   color: red;
+// }
+
+// // ЗДЕСЬ МЫ ПИШЕМ СТИЛИ ДЛЯ MOBILE
+
+// @media (width: 768px) {
+//   .container {
+//     width: 708px;
+//   }
+
+//   // ЗДЕСЬ МЫ ПИШЕМ СТИЛИ ДЛЯ TABLET
+// }
+
+// @media (width: 1200px) {
+//   .container {
+//     width: 1145px;
+//   }
+
+//   // ЗДЕСЬ МЫ ПИШЕМ СТИЛИ ДЛЯ DESKTOP
+// }
+
+
+// div#carousel { 
+//   perspective: 1200px; 
+//   background: #100000; 
+//   padding-top: 10%; 
+//   font-size:0; 
+//   margin-bottom: 3rem; 
+//   overflow: hidden; 
+// }
+
+// figure#spinner { 
+//   transform-style: preserve-3d; 
+//   height: 300px; 
+//   transform-origin: 50% 50% -500px; 
+//   transition: 1s; 
+// } 
+
+// figure#spinner img { 
+//   width: 40%; max-width: 425px; 
+//   position: absolute; left: 30%;
+//   transform-origin: 50% 50% -500px;
+//   outline:1px solid transparent; 
+// }
+
+// figure#spinner img:nth-child(1) { transform:rotateY(0deg); 
+// }
+
+// figure#spinner img:nth-child(2) { transform: rotateY(-45deg); }
+
+// figure#spinner img:nth-child(3) { transform: rotateY(-90deg); }
+
+// figure#spinner img:nth-child(4) { transform: rotateY(-135deg); }
+
+// figure#spinner img:nth-child(5){ transform: rotateY(-180deg); }
+
+// figure#spinner img:nth-child(6){ transform: rotateY(-225deg); }
+
+// figure#spinner img:nth-child(7){ transform: rotateY(-270deg); }
+
+// figure#spinner img:nth-child(8){ transform: rotateY(-315deg); }
+
+// div#carousel ~ span { 
+//   color: #fff; 
+//   margin: 5%; 
+//   display: inline-block; 
+//   text-decoration: none; 
+//   font-size: 2rem; 
+//   transition: 0.6s color; 
+//   position: relative; 
+//   margin-top: -6rem; 
+//   border-bottom: none; 
+//   line-height: 0; }
+//   div#carousel ~ span:hover { color: #888; cursor: pointer; }
