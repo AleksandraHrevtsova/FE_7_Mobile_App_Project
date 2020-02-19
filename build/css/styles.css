@@ -904,6 +904,72 @@ iframe {
   margin: 0 auto;
 }
 
+.section6_wrapper {
+  background: url("../../src/images/footerfon.jpg");
+}
+
+.section6 {
+  padding-bottom: 150px;
+}
+
+.s6_form {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-flow: column;
+  width: 280px;
+  margin: 0 auto;
+}
+
+.s6_form input {
+  margin-bottom: 25px;
+}
+
+.s6_btn {
+  display: block;
+  margin: 25px auto;
+  font-size: 15px;
+  width: 100px;
+  height: 40px;
+  border-radius: 20%;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  border: none;
+}
+
+.s6_icons {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+}
+
+.s6_icons a {
+  display: -webkit-box;
+  display: flex;
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+  background: pink;
+}
+
+.s6_icons a img {
+  display: block;
+  width: 30px;
+  padding-left: 10px;
+}
+
+.container {
+  width: 292px;
+  margin: 0 auto;
+}
+
+hr {
+  width: inherit;
+}
+
 a {
   text-decoration: none;
 }
@@ -1051,6 +1117,23 @@ a {
 
   .container {
     width: 708px;
+  }
+
+  .s6_form {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-flow: row wrap;
+    width: 410px;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+  }
+
+  .s6_form input {
+    width: 200px;
+  }
+
+  .s6_form textarea {
+    width: 410px;
   }
 }
 

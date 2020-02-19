@@ -3,11 +3,80 @@
   margin: 0 auto;
 }
 
+.section6_wrapper {
+  background: url("../../src/images/footerfon.jpg");
+}
+
+.section6 {
+  padding-bottom: 150px;
+}
+
+.s6_form {
+  display: flex;
+  flex-flow: column;
+  width: 280px;
+  // justify-content: center;
+  margin: 0 auto;
+}
+
+.s6_form input {
+  margin-bottom: 25px;
+}
+
+.s6_btn {
+  display: block;
+  margin: 25px auto;
+  font-size: 15px;
+  width: 100px;
+  height: 40px;
+  border-radius: 20%;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  border: none;
+}
+
+.s6_icons {
+  display: flex;
+  justify-content: center;
+}
+
+.s6_icons a {
+  display: flex;
+  width: 50px;
+  height: 50px;
+  // border-radius: 50%;
+  margin: 10px;
+  background: pink;
+}
+
+.s6_icons a img {
+  display: block;
+  width: 30px;
+  padding-left: 10px;
+}
+
+
 // ЗДЕСЬ МЫ ПИШЕМ СТИЛИ ДЛЯ MOBILE
 
 @media (width: 768px) {
   .container {
     width: 708px;
+  }
+
+  
+  .s6_form {
+    flex-flow: row wrap;
+    width: 410px;
+    justify-content: space-between;
+  }
+  
+  .s6_form input {
+    width: 200px;
+  }
+
+  .s6_form textarea {
+    width: 410px;
   }
 
   // ЗДЕСЬ МЫ ПИШЕМ СТИЛИ ДЛЯ TABLET
