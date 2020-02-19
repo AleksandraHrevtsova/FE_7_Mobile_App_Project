@@ -1,6 +1,13 @@
 @font-face {
-  font-weight: "OdibeeSans-Regular";
+  font-family: "OdibeeSans-Regular";
   src: url("../fonts/OdibeeSans-Regular.ttf") format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SquadaOne";
+  src: url("../fonts/SquadaOne-Regular.ttf") format('ttf');
   font-weight: normal;
   font-style: normal;
 }

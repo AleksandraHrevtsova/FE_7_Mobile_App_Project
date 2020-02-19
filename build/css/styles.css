@@ -397,8 +397,15 @@ body {
 }
 
 @font-face {
-  font-weight: "OdibeeSans-Regular";
+  font-family: "OdibeeSans-Regular";
   src: url("../fonts/OdibeeSans-Regular.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SquadaOne";
+  src: url("../fonts/SquadaOne-Regular.ttf") format("ttf");
   font-weight: normal;
   font-style: normal;
 }
@@ -726,11 +733,10 @@ h3 {
 }
 
 .section_wrapper {
-  background: #31d4e7;
-  background-image: url("../images/alien.jpg");
+  background: whitesmoke;
   background-position: center;
   background-size: cover;
-  color: wheat;
+  color: black;
 }
 
 .section-3 {
@@ -741,10 +747,12 @@ h3 {
 .section-3_title {
   text-align: center;
   text-transform: uppercase;
+  font-family: "SquadaOne";
 }
 
 .section-3_text {
   text-align: center;
+  font-family: "SquadaOne";
 }
 
 .support {
@@ -768,7 +776,11 @@ h3 {
   height: 70px;
   margin: 10px;
   border-radius: 50%;
-  background: darkblue;
+  background: white;
+}
+
+.circle:last-child {
+  background: #65a704;
 }
 
 .ico {
@@ -921,26 +933,6 @@ a {
   .section-2_title::after {
     right: 31%;
   }
-
-  .container {
-    width: 708px;
-    margin: 0 auto;
-  }
-
-  .section-3 {
-    height: 100%;
-  }
-
-  .section-3_text {
-    width: 540px;
-    display: block;
-    margin: 0 auto;
-  }
-
-  iframe {
-    width: 500px;
-    height: 306px;
-  }
 }
 
 @media (width: 768px) {
@@ -1043,6 +1035,26 @@ a {
 
   .container {
     width: 708px;
+    margin: 0 auto;
+  }
+
+  .section-3 {
+    height: 100%;
+  }
+
+  .section-3_text {
+    width: 540px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  iframe {
+    width: 500px;
+    height: 306px;
+  }
+
+  .container {
+    width: 708px;
   }
 
   .container {
@@ -1090,6 +1102,32 @@ a {
 
   .picture_1 {
     width: 500px;
+  }
+
+  .container {
+    width: 1145px;
+  }
+
+  .section-3 {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-flow: row;
+  }
+
+  .s3_block {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-flow: column;
+    width: 550px;
+  }
+
+  iframe {
+    width: 550px;
+    height: 350px;
   }
 
   .container {
