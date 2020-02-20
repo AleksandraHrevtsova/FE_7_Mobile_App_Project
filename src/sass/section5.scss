@@ -3,35 +3,41 @@
   margin: 0 auto;
 }
 
+.section5 {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+
 .slider {
-  // position: relative;
-  // overflow: hidden;
+  position: relative;
+  overflow: hidden;
 }
 
 .slider__wrapper {
   display: flex;
   transition: transform 0.6s ease;
   list-style: none;
+  padding: 0;
 }
 
 .slider__item {
   flex: 0 0 100%;
   max-width: 100%;
+}
+
+.s5_item {
   display: flex;
   flex-flow: column;
+  justify-content: center;
+  height: 300px;
 }
 
-.custom_name,
-.custom_text {
-  display: flex;
-}
-
-.custom_name {
-  font-size: 16px;
-}
-
-.custom_text {
-  font-size: 14px;
+.s5_item img,
+.s5_item h3,
+.s5_item p {
+  display: block;
+  margin: 0 auto;
 }
 
 .slider__control {
@@ -87,29 +93,23 @@
 }
 
 .slider__item>div {
-  line-height: 250px;
-  font-size: 100px;
   text-align: center;
 }
 
-.p {
-  color: red;
-}
+// ТУТ ПРОПИСЫВАЕТ СТИЛИ ПОД MOBILE
 
-// ЗДЕСЬ МЫ ПИШЕМ СТИЛИ ДЛЯ MOBILE
-
-@media (width: 768px) {
+@media (min-width: 768px) {
   .container {
     width: 708px;
   }
 
-  // ЗДЕСЬ МЫ ПИШЕМ СТИЛИ ДЛЯ TABLET
+  // ТУТ ПРОПИСЫВАЕТ СТИЛИ ПОД TABLET
 }
 
-@media (width: 1200px) {
+@media (min-width: 1199px) {
   .container {
-    width: 1145px;
+    width: 1120px;
   }
 
-  // ЗДЕСЬ МЫ ПИШЕМ СТИЛИ ДЛЯ DESKTOP
+  // ТУТ ПРОПИСЫВАЕТ СТИЛИ ПОД DESKTOP
 }
