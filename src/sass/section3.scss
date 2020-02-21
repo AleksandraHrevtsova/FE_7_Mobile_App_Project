@@ -4,11 +4,11 @@
 }
 
 .section_wrapper {
-  background: #31d4e7;
-  background-image: url('../images/Aurora-Borealis-Main-1.jpg');
+  background: whitesmoke;
+  // background-image: url('../images/alien.jpg');
   background-position: center;
   background-size: cover;
-  color: wheat;
+  color: black;
 }
 
 .section-3 {
@@ -19,10 +19,14 @@
 .section-3_title {
   text-align: center;
   text-transform: uppercase;
+  font-family: "SquadaOne";
 }
+
+
 
 .section-3_text {
   text-align: center;
+  font-family: "SquadaOne";
 }
 
 .support {
@@ -41,7 +45,11 @@
   height: 70px;
   margin: 10px;
   border-radius: 50%;
-  background: darkblue;
+  background: rgb(255, 255, 255);
+}
+
+.circle:last-child {
+  background: rgb(101, 167, 4);
 }
 
 .ico {
@@ -61,7 +69,7 @@ iframe {
   height: 218px;
 }
 
-@media (min-width: 768px) {
+@media (width: 768px) {
   .container {
     width: 708px;
     margin: 0 auto;
@@ -81,6 +89,26 @@ iframe {
     width: 500px;
     height: 306px;
   }
+}
 
+@media (width: 1200px) {
+  .container {
+    width: 1145px;
+  }
 
+  .section-3 {
+    display: flex;
+    flex-flow: row;
+  }
+
+  .s3_block {
+    display: flex;
+    flex-flow: column;
+    width: 550px;
+  }
+
+  iframe {
+    width: 550px;
+    height: 350px;
+  }
 }
