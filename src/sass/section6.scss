@@ -4,11 +4,35 @@
 }
 
 .section6_wrapper {
-  background: url("../../src/images/footerfon.jpg");
+  background-image: url("../../src/images/footerfon.jpg");
+  background-position: right;
+  background-size: cover;
+  color: rgb(245, 249, 252);
 }
 
 .section6 {
-  padding-bottom: 150px;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  padding: 150px 0;
+  align-items: center;
+}
+
+.s6_title,
+.s6_underform_titlet,
+.s6_underform_text,
+.s6_span {
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.s6_span {
+  margin-top: 50px;
+}
+
+.s6_underform_text {
+  width: 280px;
 }
 
 .s6_form {
@@ -38,22 +62,27 @@
 
 .s6_icons {
   display: flex;
-  justify-content: center;
+  flex-flow: row;
+  justify-content: space-around;
+  width: 280px;
+  margin-top: 50px;
 }
 
 .s6_icons a {
   display: flex;
   width: 50px;
   height: 50px;
-  // border-radius: 50%;
-  margin: 10px;
+  border-radius: 50%;
   background: pink;
+  position: relative;
 }
 
 .s6_icons a img {
   display: block;
   width: 30px;
-  padding-left: 10px;
+  position: absolute;
+  top: 18%;
+  left: 18%;
 }
 
 
@@ -63,7 +92,6 @@
   .container {
     width: 708px;
   }
-
 
   .s6_form {
     flex-flow: row wrap;
@@ -79,12 +107,41 @@
     width: 410px;
   }
 
+  .s6_underform_text {
+    display: block;
+    width: 500px;
+  }
+
   // ЗДЕСЬ МЫ ПИШЕМ СТИЛИ ДЛЯ TABLET
 }
 
 @media (width: 1200px) {
   .container {
     width: 1145px;
+  }
+
+  .s6_form {
+    flex-flow: column wrap;
+    width: 700px;
+    justify-content: space-around;
+    height: 150px;
+  }
+
+  .s6_form input {
+    width: 330px;
+    height: 50px;
+    margin-bottom: 25px;
+  }
+
+  .s6_form textarea {
+    width: 350px;
+    height: 150px;
+    margin-bottom: 25px;
+  }
+
+  .s6_underform_text {
+    display: block;
+    width: 700px;
   }
 
   // ЗДЕСЬ МЫ ПИШЕМ СТИЛИ ДЛЯ DESKTOP

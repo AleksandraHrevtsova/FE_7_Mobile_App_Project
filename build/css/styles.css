@@ -408,142 +408,6 @@ body {
   margin: 0 auto;
 }
 
-body {
-  margin: 0;
-  font-family: Helvetica, sans-serif;
-  background-color: #f4f4f4;
-}
-
-a {
-  color: black;
-}
-
-/* header */
-
-.header_wrapper {
-  position: fixed;
-  width: 100%;
-  top: 10px;
-  background-color: white;
-}
-
-.header {
-  margin: 0 auto;
-  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
-  z-index: 3;
-}
-
-.header ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  overflow: hidden;
-  background-color: #fff;
-}
-
-.header li a {
-  display: block;
-  padding: 20px 20px;
-  border-right: 1px solid #f4f4f4;
-  text-decoration: none;
-}
-
-.header li a:hover,
-.header .menu-btn:hover {
-  background-color: #f4f4f4;
-}
-
-.header .logo {
-  display: -webkit-inline-box;
-  display: inline-flex;
-  font-size: 2em;
-  padding: 10px 20px;
-}
-
-/* menu */
-
-.header .menu {
-  clear: both;
-  max-height: 0;
-  -webkit-transition: max-height .2s ease-out;
-  transition: max-height .2s ease-out;
-}
-
-/* menu icon */
-
-.header .menu-icon {
-  cursor: pointer;
-  display: inline-block;
-  float: right;
-  padding: 28px 20px;
-  position: relative;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.header .menu-icon .navicon {
-  background: #333;
-  display: block;
-  height: 2px;
-  position: relative;
-  -webkit-transition: background .2s ease-out;
-  transition: background .2s ease-out;
-  width: 18px;
-}
-
-.header .menu-icon .navicon:before,
-.header .menu-icon .navicon:after {
-  background: #333;
-  content: '';
-  display: block;
-  height: 100%;
-  position: absolute;
-  -webkit-transition: all .2s ease-out;
-  transition: all .2s ease-out;
-  width: 100%;
-}
-
-.header .menu-icon .navicon:before {
-  top: 5px;
-}
-
-.header .menu-icon .navicon:after {
-  top: -5px;
-}
-
-/* menu btn */
-
-.header .menu-btn {
-  display: none;
-}
-
-.header .menu-btn:checked ~ .menu {
-  max-height: 100%;
-}
-
-.header .menu-btn:checked ~ .menu-icon .navicon {
-  background: transparent;
-}
-
-.header .menu-btn:checked ~ .menu-icon .navicon:before {
-  -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-}
-
-.header .menu-btn:checked ~ .menu-icon .navicon:after {
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-
-.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
-.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
-  top: 0;
-}
-
-/* 48em = 768px */
-
 .section1_wrapper {
   background: #d87c7c;
   background-image: url("../images/earth1.jpg");
@@ -1008,6 +872,7 @@ iframe {
   flex-flow: column;
   -webkit-box-pack: center;
   justify-content: center;
+  padding: 100px 0;
 }
 
 .s5_title {
@@ -1125,11 +990,40 @@ iframe {
 }
 
 .section6_wrapper {
-  background: url("../../src/images/footerfon.jpg");
+  background-image: url("../../src/images/footerfon.jpg");
+  background-position: right;
+  background-size: cover;
+  color: #f5f9fc;
 }
 
 .section6 {
-  padding-bottom: 150px;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-flow: column;
+  -webkit-box-pack: center;
+  justify-content: center;
+  padding: 150px 0;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
+.s6_title,
+.s6_underform_titlet,
+.s6_underform_text,
+.s6_span {
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.s6_span {
+  margin-top: 50px;
+}
+
+.s6_underform_text {
+  width: 280px;
 }
 
 .s6_form {
@@ -1162,8 +1056,12 @@ iframe {
 .s6_icons {
   display: -webkit-box;
   display: flex;
-  -webkit-box-pack: center;
-  justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  flex-flow: row;
+  justify-content: space-around;
+  width: 280px;
+  margin-top: 50px;
 }
 
 .s6_icons a {
@@ -1171,14 +1069,41 @@ iframe {
   display: flex;
   width: 50px;
   height: 50px;
-  margin: 10px;
+  border-radius: 50%;
   background: pink;
+  position: relative;
 }
 
 .s6_icons a img {
   display: block;
   width: 30px;
-  padding-left: 10px;
+  position: absolute;
+  top: 18%;
+  left: 18%;
+}
+
+.container {
+  width: 292px;
+  margin: 0 auto;
+}
+
+.footer_wrapper {
+  background-color: black;
+}
+
+hr {
+  width: inherit;
+  padding-top: 10px;
+}
+
+.footer {
+  padding: 50px 0;
+}
+
+.footer_text_1,
+.footer_text_2 {
+  color: white;
+  font-weight: bold;
 }
 
 a {
@@ -1226,61 +1151,6 @@ a {
 @media (width: 768px) {
   .container {
     min-width: 708px;
-  }
-
-  .header li {
-    display: -webkit-box;
-    display: flex;
-  }
-
-  .header_wrapper {
-    position: fixed;
-  }
-
-  .header {
-    display: -webkit-box;
-    display: flex;
-    -webkit-box-pack: center;
-    justify-content: center;
-  }
-
-  .header li a {
-    padding: 20px 30px;
-  }
-
-  .logo {
-    display: -webkit-box;
-    display: flex;
-    -webkit-box-pack: center;
-    justify-content: center;
-    padding: 0;
-  }
-
-  .header .menu {
-    display: -webkit-box;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    flex-flow: row wrap;
-    -webkit-box-pack: center;
-    justify-content: center;
-    clear: none;
-    float: right;
-    max-height: none;
-  }
-
-  .categories {
-    display: -webkit-box;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    flex-flow: row;
-    -webkit-box-pack: justify;
-    justify-content: space-between;
-  }
-
-  .header .menu-icon {
-    display: none;
   }
 
   .container {
@@ -1370,6 +1240,15 @@ a {
   .s6_form textarea {
     width: 410px;
   }
+
+  .s6_underform_text {
+    display: block;
+    width: 500px;
+  }
+
+  .container {
+    width: 708px;
+  }
 }
 
 @media (width: 1200px) {
@@ -1452,14 +1331,34 @@ a {
   .container {
     width: 1145px;
   }
-}
 
-@media (width: 1199px) {
-  .container {
-    width: 1120px;
+  .s6_form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-flow: column wrap;
+    width: 700px;
+    justify-content: space-around;
+    height: 150px;
   }
 
-  .header_wrapper {
-    position: fixed;
+  .s6_form input {
+    width: 330px;
+    height: 50px;
+    margin-bottom: 25px;
+  }
+
+  .s6_form textarea {
+    width: 350px;
+    height: 150px;
+    margin-bottom: 25px;
+  }
+
+  .s6_underform_text {
+    display: block;
+    width: 700px;
+  }
+
+  .container {
+    width: 1145px;
   }
 }
