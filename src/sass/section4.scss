@@ -3,14 +3,194 @@
   margin: 0 auto;
 }
 
-// ЗДЕСЬ МЫ ПИШЕМ СТИЛИ ДЛЯ MOBILE
+.section4 {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  padding: 100px 0;
+  border-bottom: 1px solid #e5e5e5;
+  align-items: center;
+}
+
+.s4__name,
+.team__description {
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.team__description {
+  font-size: 15px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: #a8a8a8;
+  margin-bottom: 50px;
+}
+
+.team__list {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  align-items: center;
+}
+
+
+.team__item {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  position: relative;
+  margin-bottom: 70px;
+}
+
+/*div*/
+.employee {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  position: absolute;
+  margin-bottom: 32px;
+  width: 200px;
+  height: 300px;
+  z-index: 1;
+  background: rgb(238, 174, 202);
+  background: radial-gradient(circle, rgba(238, 174, 202, .8) 0%, rgba(221, 156, 15, 0.8) 50%);
+  transition: .3s linear;
+  opacity: 0;
+}
+
+.team__item:hover .employee {
+  transform: translate(-10px, -10px);
+}
+
+/*img*/
+// .employee__image {
+//   display: flex;
+//   // width: 280px;
+//   // height: 300px;
+//   justify-content: space-between;
+// }
+
+/*div с ссылками на соцсети*/
+.employee__links {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin: 0 auto;
+  width: 137px;
+}
+
+.team__item:hover .employee {
+  box-shadow: 10px 10px 0 rgba($color: #eea113, $alpha: .7);
+  opacity: 0.5;
+}
+
+/*div с ссылками на соцсети*/
+.team__item:hover .employee,
+.team__item:focus .employee {
+  opacity: 1;
+}
+
+.employee__link {
+  width: 44px;
+  height: 44px;
+  // background-color: white;
+  background-color: inherit;
+  border: none;
+  background-position: center;
+  padding: 0;
+  z-index: 0;
+}
+
+.employee__link:hover {
+  background-color: rgba($color: #bdb3b3, $alpha: .5);
+  border-radius: 30%;
+}
+
+.employee__link:hover .icon {
+  fill: #ffffff;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  fill: #6765f0;
+  margin: 7px;
+  background-position: center;
+  background-color: inherit;
+  z-index: 1;
+}
+
+
+/*a*/
+
+.employee__link--fb {
+  position: absolute;
+  top: 45%;
+  left: 20%;
+}
+
+.employee__link--insta {
+  position: absolute;
+  top: 45%;
+  left: 40%;
+}
+
+.employee__link--hang {
+  position: absolute;
+  top: 45%;
+  left: 60%;
+}
+
+// /*div*/
+.employee__topic {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  width: 200px;
+}
+
+/*p*/
+.employee__name {
+  font-size: 14px;
+  font-family: 'Montserrat';
+  color: #333333;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+/*p*/
+.employee__profession {
+  font-style: italic;
+  text-transform: capitalize;
+  font-size: 15px;
+  color: #a8a8a8;
+  margin: 0;
+  height: 50px;
+}
+
+.employee__name,
+.employee__profession {
+  display: block;
+  text-align: center;
+}
 
 @media (width: 768px) {
   .container {
     width: 708px;
   }
 
-  // ЗДЕСЬ МЫ ПИШЕМ СТИЛИ ДЛЯ TABLET
+  .team__description {
+    width: 600px;
+  }
+
+  .team__list {
+    flex-flow: row wrap;
+    justify-content: space-around;
+    width: 599px;
+  }
 }
 
 @media (width: 1200px) {
@@ -18,5 +198,19 @@
     width: 1145px;
   }
 
-  // ЗДЕСЬ МЫ ПИШЕМ СТИЛИ ДЛЯ DESKTOP
+  .team__description {
+    width: 900px;
+    font-weight: bold;
+  }
+
+  .team__list {
+    flex-flow: row wrap;
+    justify-content: space-around;
+    width: 799px;
+  }
+
+  .team__item {
+    // width: 200px;
+    // margin-right: 50px;
+  }
 }
