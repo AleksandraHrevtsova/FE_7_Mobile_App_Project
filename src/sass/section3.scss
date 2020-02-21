@@ -22,8 +22,6 @@
   font-family: "SquadaOne";
 }
 
-
-
 .section-3_text {
   text-align: center;
   font-family: "SquadaOne";
@@ -99,6 +97,7 @@ iframe {
   .section-3 {
     display: flex;
     flex-flow: row;
+    justify-content: space-between;
   }
 
   .s3_block {

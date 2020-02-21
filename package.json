@@ -10,7 +10,7 @@
     "sprite": "gulp sprite",
     "images": "gulp images"
   },
-  "homepage": "https://aleksandrahrevtsova.github.io/FE_7_Mobile_App_Project/",
+  "homepage": "https://aleksandrahrevtsova.github.io/FE_7_Mobile_App_Project/build/index.html",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/luxplanjay/gulp-starter-kit.git"
