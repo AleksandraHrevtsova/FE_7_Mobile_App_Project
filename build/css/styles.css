@@ -807,7 +807,7 @@ iframe {
   align-items: center;
 }
 
-.s4__name,
+.s4__title,
 .team__description {
   display: block;
   text-align: center;
@@ -1005,6 +1005,12 @@ iframe {
   justify-content: center;
 }
 
+.s5_title {
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+}
+
 .slider {
   position: relative;
   overflow: hidden;
@@ -1035,14 +1041,17 @@ iframe {
   flex-flow: column;
   -webkit-box-pack: center;
   justify-content: center;
-  height: 300px;
 }
 
 .s5_item img,
 .s5_item h3,
-.s5_item p {
+.slider_text {
   display: block;
-  margin: 0 auto;
+  margin: 10px auto;
+}
+
+.slider_text {
+  height: 100px;
 }
 
 .slider__control {
@@ -1208,11 +1217,24 @@ a {
   .container {
     width: 708px;
   }
+
+  .s5_item img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .slider_text {
+    width: 400px;
+  }
 }
 
 @media (min-width: 1199px) {
   .container {
     width: 1120px;
+  }
+
+  .slider_text {
+    width: 700px;
   }
 }
 
