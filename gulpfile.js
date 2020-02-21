@@ -55,12 +55,12 @@ function scripts() {
     .pipe(dest('build/js'));
 }
 
-function sprite() {
-  return src('src/images/icons/*.svg')
-    .pipe(svgstore({ inlineSvg: true }))
-    .pipe(rename('sprite.svg'))
-    .pipe(dest('build/images/icons'));
-}
+// function sprite() {
+//   return src('src/images/icons/*.svg')
+//     .pipe(svgstore({ inlineSvg: true }))
+//     .pipe(rename('sprite.svg'))
+//     .pipe(dest('build/images/icons'));
+// }
 
 function images() {
   return src(['src/images/**/*.{jpg,jpeg,png,svg}', '!src/images/icons/**/*'])
@@ -109,10 +109,7 @@ function prepare() {
   return del(['**/.gitkeep', 'README.md']);
 }
 
-const build = series(
-  clean,
-  parallel(sprite, images, fonts, html, styles, scripts),
-);
+const build = series(clean, parallel(images, fonts, html, styles, scripts));
 
 const start = series(build, watcher, serve);
 
