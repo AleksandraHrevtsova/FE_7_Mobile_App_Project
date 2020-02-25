@@ -1,13 +1,7 @@
-.container {
-  width: 292px;
-  margin: 0 auto;
-}
-
-.section6_wrapper {
-  background-image: url("./images/footerfon.jpg");
+.s6_wrapper {
+  background: url('../images/footerfon.jpg');
   background-position: right;
   background-size: cover;
-  color: rgb(245, 249, 252);
 }
 
 .section6 {
@@ -16,6 +10,7 @@
   justify-content: center;
   padding: 150px 0;
   align-items: center;
+  color: rgb(245, 249, 252);
 }
 
 .s6_title,
@@ -25,6 +20,8 @@
   display: block;
   text-align: center;
   text-transform: uppercase;
+  margin-top: 0;
+  // color: black;
 }
 
 .s6_span {
@@ -69,7 +66,7 @@
 }
 
 .s6_icons a {
-  display: flex;
+  display: block;
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -91,8 +88,21 @@
 // ЗДЕСЬ МЫ ПИШЕМ СТИЛИ ДЛЯ MOBILE
 
 @media (width: 768px) {
-  .container {
-    width: 708px;
+  .section6 {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+  }
+
+  .s6_block1,
+  .s6_block2 {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 500px;
+    vertical-align: top;
   }
 
   .s6_form {
@@ -111,28 +121,29 @@
 
   .s6_underform_text {
     display: block;
-    width: 500px;
+    // width: 500px;
   }
 
   // ЗДЕСЬ МЫ ПИШЕМ СТИЛИ ДЛЯ TABLET
 }
 
 @media (width: 1200px) {
-  .container {
-    width: 1145px;
+  .section6 {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
   }
 
   .s6_form {
-    flex-flow: column wrap;
-    width: 700px;
-    justify-content: space-around;
-    height: 150px;
+    flex-flow: column;
+    justify-content: space-between;
+
   }
 
   .s6_form input {
-    width: 330px;
+    width: 350px;
     height: 50px;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
   }
 
   .s6_form textarea {
@@ -141,9 +152,14 @@
     margin-bottom: 25px;
   }
 
+  .s6_btn {
+    margin: 0 auto;
+  }
+
   .s6_underform_text {
+    color: black;
     display: block;
-    width: 700px;
+    // width: 700px;
   }
 
   // ЗДЕСЬ МЫ ПИШЕМ СТИЛИ ДЛЯ DESKTOP
