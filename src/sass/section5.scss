@@ -1,8 +1,3 @@
-.container {
-  width: 292px;
-  margin: 0 auto;
-}
-
 .section5 {
   display: flex;
   flex-flow: column;
@@ -108,13 +103,7 @@
   text-align: center;
 }
 
-// ТУТ ПРОПИСЫВАЕТ СТИЛИ ПОД MOBILE
-
 @media (min-width: 768px) {
-  .container {
-    width: 708px;
-  }
-
   .s5_item img {
     width: 200px;
     height: 200px;
@@ -124,17 +113,10 @@
     width: 400px;
   }
 
-  // ТУТ ПРОПИСЫВАЕТ СТИЛИ ПОД TABLET
 }
 
-@media (min-width: 1199px) {
-  .container {
-    width: 1120px;
-  }
-
+@media (min-width: 1200px) {
   .slider_text {
     width: 700px;
   }
-
-  // ТУТ ПРОПИСЫВАЕТ СТИЛИ ПОД DESKTOP
 }

@@ -84,10 +84,7 @@
   color: red;
 }
 
-
-// ЗДЕСЬ МЫ ПИШЕМ СТИЛИ ДЛЯ MOBILE
-
-@media (width: 768px) {
+@media (min-width: 768px) {
   .section6 {
     display: flex;
     flex-flow: column;
@@ -124,10 +121,9 @@
     // width: 500px;
   }
 
-  // ЗДЕСЬ МЫ ПИШЕМ СТИЛИ ДЛЯ TABLET
 }
 
-@media (width: 1200px) {
+@media (min-width: 1200px) {
   .section6 {
     display: flex;
     flex-flow: row;
@@ -162,5 +158,4 @@
     // width: 700px;
   }
 
-  // ЗДЕСЬ МЫ ПИШЕМ СТИЛИ ДЛЯ DESKTOP
 }

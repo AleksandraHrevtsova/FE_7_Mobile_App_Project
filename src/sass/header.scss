@@ -123,11 +123,7 @@
 
 /* 48em = 768px */
 
-@media (width: 768px) {
-  .container {
-    width: 768px;
-  }
-
+@media (min-width: 768px) {
   .header li {
     display: flex;
   }
@@ -171,11 +167,7 @@
   }
 }
 
-@media (width: 1200px) {
-  .container {
-    width: 1120px;
-  }
-
+@media (min-width: 1200px) {
   .header li {
     display: flex;
   }
